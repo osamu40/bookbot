@@ -21,7 +21,7 @@ def sorted_list(ch_dict):
     ch_list = []
 
     for char_key in ch_dict:
-
+ 
         sorted_ch = {
             "char": "",
             "count": 0
@@ -29,9 +29,9 @@ def sorted_list(ch_dict):
 
         sorted_ch["char"] = char_key
         sorted_ch["count"] = ch_dict[char_key]
-        ch_list.append(sorted_ch)
 
-
+        if char_key.isalpha():
+            ch_list.append(sorted_ch)
 
     ch_list.sort(reverse=True, key=sort_on)
 
